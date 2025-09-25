@@ -51,16 +51,15 @@ let convertToNumber: number;
 const dirctorAverageSalary = 500;
 
 function createEmployee(salary: number | string) {
-  let numericSalary: number;
-  if (typeof salary === "string") {
-    numericSalary = parseInt(salary.replace(/[^0-9]/g, ""), 10);
+ 
+
+  
+
+
+  if (+salary < 500 && typeof salary === "number") {
+    return new Teacher(salary);
   } else {
-    numericSalary = salary;
-  }
-  if (numericSalary < 500) {
-    return new Teacher(numericSalary);
-  } else {
-    return new Director(numericSalary);
+    return new Director(+salary);
   }
 }
 function isDirector(employee: Director | Teacher): employee is Director {

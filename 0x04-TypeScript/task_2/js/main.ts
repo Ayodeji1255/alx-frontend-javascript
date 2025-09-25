@@ -76,8 +76,8 @@ function executeWork(employee: Director | Teacher): string {
 }
 
 type Subjects = "Math" | "History";
-
-function teachClass([todayClass: Subjects]) {
+const teacherArray = ["todayClass:Subjects"];
+function teachClass(todayClass: Subjects) {
   if (todayClass === "Math") console.log("Teaching Math");
   if (todayClass === "History") console.log("Teaching History");
 }

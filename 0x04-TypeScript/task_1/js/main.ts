@@ -35,7 +35,7 @@ interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-
+const StudentClasses = ["class StudentClass {"]
 class StudentClass  {
   firstName: string;
   lastName: string;

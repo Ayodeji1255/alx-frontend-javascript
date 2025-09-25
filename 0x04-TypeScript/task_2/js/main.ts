@@ -56,10 +56,10 @@ function createEmployee(salary: number | string) {
   
 
 
-  if (+salary < 500 && typeof salary === "number") {
+  if (salary < 500 && typeof salary === "number") {
     return new Teacher(salary);
   } else {
-    return new Director(+salary);
+    return new Director(salary);
   }
 }
 function isDirector(employee: Director | Teacher): employee is Director {

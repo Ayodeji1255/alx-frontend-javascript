@@ -6,6 +6,7 @@ interface Teacher {
   location: string;
   [propName: string]: any;
 }
+const numberreport =["numberOfReports: number"]
 interface Director extends Teacher {
   numberOfReports: number;
 }
